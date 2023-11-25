@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import './alert.css';
+import PropTypes from 'prop-types';
 
-function Alert() {
+function Alert({ type }) {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -12,7 +13,15 @@ function Alert() {
     return () => clearTimeout(timer);
   }, []);
 
-  return isVisible ? <div className="alert-container">Save successfully</div> : null;
+  return isVisible ? (
+    <div className="alert-container" style={{ backgroundColor: type === 'success' ? '' : 'red' }}>
+      {type === 'success' ? 'Save successfully' : 'Wrong Email'}
+    </div>
+  ) : null;
 }
 
 export default Alert;
+
+Alert.propTypes = {
+  type: PropTypes.string.isRequired,
+};
