@@ -68,11 +68,21 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  height: 30px;
+}
+
+.home-page-container .home-page-container-row-content-titleValue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-page-container .home-page-container-row-content-value {
   color: black;
   margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-page-container .home-page-container-button {
@@ -90,4 +100,79 @@ body {
 .home-page-container .home-page-container-button:hover {
   background: pink;
   color: white;
+}
+
+.home-page-container select {
+  font-weight: bold;
+  margin-left: 10px;
+  width: 20%;
+  padding-left: 5px;
+  font-size: 16px;
+  border: none;
+}
+
+.home-page-container select:focus {
+  outline: none;
+  border: none;
+}
+
+.home-page-container input {
+  margin-left: 10px;
+  width: 60%;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .home-page-container {
+    width: 70vw;
+    padding: 10px 15px;
+    min-width: unset;
+  }
+
+  .home-page-container .home-page-container-header,
+  .home-page-container .home-page-container-row-content {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .home-page-container .home-page-container-header {
+    margin: 20px 0 0 0;
+  }
+
+  .home-page-container .username,
+  .home-page-container .home-page-container-row-content-value {
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+  .home-page-container select,
+  .home-page-container input {
+    width: 90%; /* 调整宽度 */
+    margin-left: 5%; /* 中心对齐 */
+  }
+
+  .home-page-container .home-page-container-button {
+    width: 80%; /* 按钮宽度调整 */
+  }
+
+  .home-page-container .username {
+    padding-left: 4px;
+    margin-top: 10px;
+  }
+
+  .home-page-container select {
+    font-size: 14px;
+    margin: 4px 0;
+    padding-left: 0;
+  }
+
+  .home-page-container input {
+    font-size: 14px;
+    margin: 4px 0;
+    padding-left: 0;
+  }
 }
