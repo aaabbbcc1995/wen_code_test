@@ -39,6 +39,14 @@ body {
   width: 100px;
   border-radius: 50%;
   border: 2px solid pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.avatar img {
+  height: 100%;
 }
 
 .home-page-container .username {

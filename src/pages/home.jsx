@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import avatar from '../assets/images/avatar.png';
 
 function Home() {
   const [editStatus, setEditStatus] = useState(false);
@@ -7,7 +8,9 @@ function Home() {
   return (
     <div className="home-page-container">
       <div className="home-page-container-header">
-        <div className="avatar" />
+        <div className="avatar">
+          <img src={avatar} alt="avatar" />
+        </div>
         <div className="username">{localStorage.getItem('username') || 'username'}</div>
       </div>
       <div className="home-page-container-content">
